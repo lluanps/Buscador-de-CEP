@@ -1,6 +1,6 @@
 import Address from '../models/address.js'
 import * as addressService from '../services/address-service.js'
-import RequestException from '../services/exceptions/request-exceptions.js';
+import * as listController from './list-controller.js'
 
 function State() {
 
@@ -72,8 +72,7 @@ async function handleInputCepChange(event) {
 
 async function handleBtnSaveClick(event) {
     event.preventDefault();
-    //const result = await requestService.getJson('https://viacep.com.br/ws/01001000/json/');
-    console.log(state.address);
+    listController.addCard(state.address);
 }
 
 function handleInputNumberChange(event) {
