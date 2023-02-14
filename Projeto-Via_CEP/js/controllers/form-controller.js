@@ -36,10 +36,15 @@ export function init() {
     state.errorNumber = document.querySelector('[data-error="number"]');
 
     state.inputNumber.addEventListener('change', handleInputNumberChange);
+    state.inputNumber.addEventListener('keyup', handleInputNumberKeyup);
     state.btnClear.addEventListener('click', handleBtnClearClick);
     state.btnSave.addEventListener('click', handleBtnSaveClick);
     state.inputCep.addEventListener('change', handleInputCepChange);
 
+}
+
+function handleInputNumberKeyup(event) {
+    state.address.number = event.target.value;
 }
 
 async function handleInputCepChange(event) {
@@ -68,7 +73,7 @@ async function handleInputCepChange(event) {
 async function handleBtnSaveClick(event) {
     event.preventDefault();
     //const result = await requestService.getJson('https://viacep.com.br/ws/01001000/json/');
-    console.log(event.target);
+    console.log(state.address);
 }
 
 function handleInputNumberChange(event) {
