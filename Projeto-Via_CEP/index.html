@@ -20,41 +20,55 @@
     </header>
 
         <main>
-            <section id="form-section">
-
+            <section id="form-section" class="form-container">
                 <div>
-                    <form name="newAddress">
-                    <div>
+                    <form name="newAddress" class="card-form">
+                    <div class="form-control">
                     <label for="cep">CEP:</label>
                     <input 
                         name="cep"
                         id="cep"
+                        class="form-input"
                         type="text"
-                        placeholder="CEP">
+                        placeholder="CEP"
+                        />
+                        <div class="error-message">Campo requerido</div>
                 </div>
-                <div>
+
+                <div class="form-control">
                     <label for="street">Logradouro:</label>
                     <input 
                         name="street"
                         id="street"
+                        class="form-input"
                         type="text"
-                        placeholder="Logradouro">
+                        placeholder="Logradouro"
+                        disabled
+                        />
+                        <div class="error-message">Campo requerido</div>
                 </div>
-                <div>
+                
+                <div class="form-control">
                     <label for="number">Número:</label>
                     <input 
                         name="number"
                         id="number"
+                        class="form-input"
                         type="text"
-                        placeholder="Número">
+                        placeholder="Número"
+                        />
                 </div>
-                <div>
+
+                <div class="form-control">
                     <label for="city">Cidade:</label>
                     <input 
                         name="city"
                         id="city"
+                        class="form-input"
                         type="text"
-                        placeholder="Cidade">
+                        placeholder="Cidade"
+                        disabled
+                        />
                 </div>
 
                     <div>
